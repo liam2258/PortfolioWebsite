@@ -95,7 +95,7 @@ button {
 
 .intro {
     padding-top: 70px;
-    padding-left: 30px;
+    padding-left: 45px;
 }
 
 .container {
@@ -112,6 +112,10 @@ button {
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(75px, 1fr) );
     padding: 15px 0px;
+}
+
+.about {
+    padding-left: 3vw;
 }
 
 .about h1 {

@@ -7,12 +7,21 @@ import jv from './Images/jv.svg';
 import py from './Images/py.svg';
 import post from './Images/post.svg';
 import reactPic from './Images/react.svg';
+import sideMenu from './Images/sideMenu.svg';
 
 function App() {
 
+  const[width, setWidth] = useState(document.querySelector("#width"))
+  
+  function reportWindowSize() {
+    setWidth(window.innerWidth);
+  }
+  
+  window.onresize = reportWindowSize;
+
   return (
     <div className="App">
-      <Navigation/>
+      <Navigation windowWidth={width}/>
       <main>
         <div></div>
         <div className='container'>
