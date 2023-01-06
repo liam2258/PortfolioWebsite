@@ -23,7 +23,6 @@ section {
     flex-direction: column;
     align-items: flex-start;
     min-height: 80vh;
-    height: 80vh;
     padding: 0px;
 }
 
@@ -97,6 +96,22 @@ button {
 .intro {
     padding-top: 70px;
     padding-left: 30px;
+}
+
+.container {
+    height: 100vh;
+}
+
+.aboutBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
+
+.iconBox {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(75px, 1fr) );
+    padding: 15px 0px;
 }
 
 .about h1 {
@@ -191,6 +206,10 @@ button {
 .nav a:nth-child(2):hover {
     color: #05B2DC;
     filter: brightness(150%);
+}
+
+.self_pic {
+    max-width: 300px;
 }
 
 @keyframes fadeIn {
