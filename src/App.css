@@ -9,8 +9,8 @@ ul {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
@@ -23,7 +23,8 @@ section {
     flex-direction: column;
     align-items: flex-start;
     min-height: 80vh;
-    padding: 0px;
+    margin: 0px auto;
+    padding: 35px 0px;
 }
 
 button {
@@ -34,6 +35,10 @@ button {
     font-size: large;
     padding: 17px;
     border-radius: 10px;
+}
+
+img {
+    padding: 1vh 1vw;
 }
 
 .intro h1 {
@@ -94,18 +99,21 @@ button {
 }
 
 .intro {
-    padding-top: 70px;
-    padding-left: 45px;
+    padding-top: 210px;
+    padding-bottom: 0px;
 }
 
-.container {
-    height: 100vh;
+.introContainer {
+    height: 100vh; 
+    padding: 20px;
+    padding-right: 7vw;
 }
 
 .aboutBox {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .iconBox {
@@ -114,16 +122,13 @@ button {
     padding: 15px 0px;
 }
 
-.about {
-    padding-left: 3vw;
-}
 
 .about h1 {
     font-size: clamp(27px, 5vw, 33px);
     filter: brightness(130%);
     padding: 0%;
     line-height: 0.9;
-    margin: 0px;
+    margin: 10px 0px 20px;
     color:#a8afd3;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition-duration: 0.5s;
@@ -155,9 +160,16 @@ button {
 }
 
 .nav {
-    padding: 5px 5px 5px 5px;
-    height: 100px;
+    padding: 0px;
+    margin-top: 0;
+    height: 70px;
     color: #16161e;
+    position: fixed;
+    width:100%;
+    background-color: rgba(26,27,39, 0.85);
+    z-index: 1500;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
 }
 
 .nav a {
@@ -177,12 +189,6 @@ button {
     padding-right: 10px;
 }
 
-.nav a:nth-child(1)::before {
-    content: "";
-    color: #05B2DC;
-    filter: brightness(130%);
-}
-
 .nav a:hover {
 	cursor: pointer;
 }
@@ -198,6 +204,7 @@ button {
 .nav a:nth-child(2) {
 	animation-delay: 1.4s;
     transition-duration: 0.5s;
+    padding-right: 40px;
 }
 .nav a:nth-child(4):hover {
     color: #05B2DC;
@@ -213,7 +220,10 @@ button {
 }
 
 .self_pic {
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    min-width: 200px;
 }
 
 @keyframes fadeIn {
@@ -237,3 +247,194 @@ button {
 		transform: translate3d(0, 0, 0);
 	}
 }
+
+.homeIcon {
+    float: left;
+    color: #05B2DC;
+    z-index: 1200;
+}
+
+.menuIcon {
+    color: #05B2DC;
+    z-index: 1200;
+    padding-right: 40px;
+}
+
+.sideMenu {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    right: -300px;
+    background: #1a1b27;
+    filter: brightness(130%);
+    z-index: 2000;
+    overflow: visible;
+}
+
+@keyframes slideIn {
+	from {
+		right: -300;
+        transform: translate3d(0, 0, -300px);
+	}
+	to {
+		right: 0;
+        transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideBack {
+	from {
+		right: 0;
+        transform: translate3d(0, 0, 0);
+	}
+	to {
+		right: -300;
+        transform: translate3d(0, 0, -300px);
+	}
+}
+
+.sideNav {
+    display: grid;
+    padding-top: 70%;
+}
+
+.sideNav a {
+    padding: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color:#a8afd3;
+}
+
+.sideNav a::before {
+    content: "•";
+    color: #05B2DC;
+    filter: brightness(130%);
+    padding-right: 10px;
+}
+
+.sideNav a:hover {
+    color: #05B2DC;
+    filter: brightness(150%);
+}
+
+.layer {
+    position: absolute;
+    background:#a8afd3;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    left: -100vw;
+    filter: blur(4px);
+    z-index: 1250;
+}
+
+.closeIcon {
+    display: flex;
+    justify-content: right;
+    padding: 30px;
+}
+
+@keyframes slideUp {
+	from {
+        transform: translate3d(0, 0, 0);
+	}
+	to {
+        transform: translate3d(0, -100px, 0);
+	}
+}
+
+@keyframes slideDown {
+	from {
+        transform: translate3d(0, -100px, 0);
+	}
+	to {
+        transform: translate3d(0, 0, 0);
+	}
+}
+
+.shadow {
+    box-shadow: 0 10px 30px -10px;
+}
+
+.projects h1 {
+    font-size: clamp(27px, 5vw, 33px);
+    filter: brightness(130%);
+    padding: 0%;
+    line-height: 0.9;
+    margin: 10px 0px 20px;
+    color:#a8afd3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition-duration: 0.5s;
+}
+
+.projects h1::before {
+    content: "⎯⎯⎯⎯";
+    color: #05B2DC;
+    font-size: clamp(20px, 5vw, 27px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 15px;
+}
+
+.projects h1::after {
+    content: "⎯⎯⎯⎯";
+    color: #05B2DC;
+    font-size: clamp(20px, 5vw, 27px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+}
+
+.projects p {
+    padding: 0px;
+    margin: 20px 0px 0px;
+    max-width: 540px;
+    color:#a8afd3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.contact h1 {
+    font-size: clamp(27px, 5vw, 33px);
+    filter: brightness(130%);
+    padding: 0%;
+    line-height: 0.9;
+    margin: 10px 0px 20px;
+    color:#a8afd3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition-duration: 0.5s;
+}
+
+.contact h1::before {
+    content: "⎯⎯⎯⎯";
+    color: #05B2DC;
+    font-size: clamp(20px, 5vw, 27px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 15px;
+}
+
+.contact h1::after {
+    content: "⎯⎯⎯⎯";
+    color: #05B2DC;
+    font-size: clamp(20px, 5vw, 27px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+}
+
+.contact p {
+    padding: 0px;
+    margin: 20px 0px 0px;
+    max-width: 540px;
+    color:#a8afd3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.about {
+    margin-left: 60px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .about {
+        margin-left: 0px;
+    }
+  }

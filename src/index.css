@@ -13,3 +13,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body, #root, .App {
+  height: 100vh;
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-color: #888faf;
+  scrollbar-width: thin;
+}
+
+.App {
+  overflow: visible;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1a1b27;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8087a8; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
