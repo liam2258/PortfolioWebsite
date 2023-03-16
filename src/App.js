@@ -21,6 +21,9 @@ function App() {
   function reportWindowSize() {
     setWidth(window.innerWidth);
     menuToggleBack();
+    if (document.getElementsByTagName( 'html' )[0].classList.contains('stuck')) {
+      document.getElementsByTagName( 'html' )[0].classList.toggle('stuck');
+    }
   }
 
   //Function to handle elements based on page scrolling
@@ -48,6 +51,8 @@ function App() {
   //Function to trigger side menu closing animation when hitting the close icon
  function menuToggleBack() {
   document.getElementById('sideMenu').style.animation="slideBack 0.15s ease-in both";
+  document.getElementById('layer').style.animation="slideLeft 0.15s ease-in both";
+  document.getElementsByTagName( 'html' )[0].classList.toggle('stuck');
 }
   
   //Listeners for screen resizing and scrolling respectively
@@ -56,7 +61,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='layer'></div>
+      <div className='layer' id='layer'></div>
       <div className='sideMenu' id='sideMenu'>
         <div className='closeIcon'>
           <img src={x} onClick={menuToggleBack}></img>
@@ -74,7 +79,8 @@ function App() {
             <h1>Hello fellow humans, I'm...</h1>
             <h2>Liam Dyer,</h2>
             <h3>Computer Programmer</h3>
-            <p>I'm a Computer Science student with a hunger for knowledge and
+              <p>
+               I'm a Computer Science student with a hunger for knowledge and
                an aptitude for action. Currently I'm studying at the University of Alaska Anchorage
                and am excited to put what I've learned to good use.
                </p>
@@ -119,6 +125,33 @@ function App() {
             <FadeUp>
               <h1>Projects</h1>
             </FadeUp>
+            <div style={{width:'100%'}}>
+              <FadeUp>
+                <div className='cardHolder'>
+                  <div className='card'>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nunc accumsan libero porta convallis imperdiet. Nullam nisl eros,
+                      condimentum ut nisl vitae, molestie ullamcorper diam.
+                    </p>
+                  </div>
+                  <div className='card'>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nunc accumsan libero porta convallis imperdiet. Nullam nisl eros,
+                      condimentum ut nisl vitae, molestie ullamcorper diam.
+                    </p>
+                  </div>
+                  <div className='card'>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nunc accumsan libero porta convallis imperdiet. Nullam nisl eros,
+                      condimentum ut nisl vitae, molestie ullamcorper diam.
+                    </p>
+                  </div>
+                </div>
+              </FadeUp>
+            </div>
           </section>
           <section className='contact' id='contact'>
             <FadeUp>

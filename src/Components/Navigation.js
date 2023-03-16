@@ -5,6 +5,8 @@ import sideMenu from '../Images/sideMenu.svg';
 //Function to trigger animation for side menu to appear when clicking on the menu icon
 function menuToggle() {
     document.getElementById('sideMenu').style.animation="slideIn 0.15s ease-in both";
+    document.getElementById('layer').style.animation="slideRight 0.15s ease-in both";
+    document.getElementsByTagName( 'html' )[0].classList.toggle('stuck');
  }
 
 //Returns a different navigation menu depending on the screen size
