@@ -16,6 +16,72 @@ function App() {
   //Hooks to keep track of screen size and page scroll location
   const[width, setWidth] = useState(window.innerWidth)
   const[scroll, setScroll] = useState(0)
+  const[response, setResponse] = useState("")
+
+  function refreshContact() {
+    document.getElementById("emailName").value = "";
+    document.getElementById("emailContact").value = "";
+    document.getElementById("emailMessage").value = "";
+  }
+
+  function handleClick() {
+    var nameField = document.getElementById("emailName").value;
+    var contactField = document.getElementById("emailContact").value;
+    var messageField = document.getElementById("emailMessage").value;
+
+    var nameItem = document.getElementById('emailName');
+    var labelName = document.getElementById('nameLabel');
+    var contactItem = document.getElementById('emailContact');
+    var labelContact = document.getElementById('contactLabel');
+    var messageItem = document.getElementById('emailMessage');
+    var messageLabel = document.getElementById('messageLabel');
+
+    if (nameField === "" || contactField === "" || messageField === "") {
+      if (nameField === "") {
+        nameItem.style.borderColor = '#F67280';
+        labelName.style.color = '#F67280';
+      }
+      if (contactField === "") {
+        contactItem.style.borderColor = '#F67280';
+        labelContact.style.color = '#F67280';
+      }
+      if (messageField === "") {
+        messageItem.style.borderColor = '#F67280';
+        messageLabel.style.color = '#F67280';
+      }
+      setResponse("Please fill out required fields");
+    } else {
+      nameItem.style.borderColor = '#64697e';
+      contactItem.style.borderColor = '#64697e';
+      messageItem.style.borderColor = '#64697e';
+      labelName.style.color = '#a8afd3';
+      labelContact.style.color = '#a8afd3';
+      messageLabel.style.color = '#a8afd3';
+
+      fetch("http://localhost:8080/send", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: nameField,
+          Subject: 'Message from portfolio website!',
+          Contact: contactField,
+          Message: messageField
+        })
+      })
+      .then(response => response)
+      .then(data => {
+        console.log('Success:', data);
+        setResponse("Message Sent!");
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setResponse("Error: Unable to send at this time");
+      });
+      refreshContact();
+    }
+  }
   
   //Function to handle elements when the screen size changes
   function reportWindowSize() {
@@ -163,13 +229,14 @@ function App() {
             <div style={{width: '100%'}}>
               <FadeUp>
                 <div className='input-container'>
-                  <label>Name:</label>
-                  <input type='text' maxlength="100" id='emailName'></input>
-                  <label>Contact:</label>
-                  <input type='text' maxlength="100" id='emailContact'></input>
-                  <label>Message:</label>
-                  <textarea rows="7" cols="10" maxlength="500" id='emailMessage'></textarea>
-                  <button>Send</button>
+                  <label id='nameLabel'>Name:</label>
+                  <input type='text' maxLength="100" id='emailName'></input>
+                  <label id='contactLabel'>Contact:</label>
+                  <input type='text' maxLength="100" id='emailContact'></input>
+                  <label id='messageLabel'>Message:</label>
+                  <textarea rows="7" cols="10" maxLength="500" id='emailMessage' spellCheck="false"></textarea>
+                  <button id='emailButton' onClick={handleClick}>Send</button>
+                  {response != "" && <p className='response'>{response}</p>}
                 </div>
               </FadeUp>
             </div>

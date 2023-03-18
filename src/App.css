@@ -562,6 +562,12 @@ label {
 }
 
 .contact button:hover {
-    background-color: #05B2DC;
+    background-color: #099abe;
+    filter: brightness(110%);
     cursor: pointer;
+}
+
+.response {
+    margin: 10px 0px 5px 0px !important;
+    max-width: none !important;
 }
