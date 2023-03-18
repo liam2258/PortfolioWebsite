@@ -78,7 +78,7 @@ function App() {
           <section className='intro'>
             <h1>Hello fellow humans, I'm...</h1>
             <h2>Liam Dyer,</h2>
-            <h3>Computer Programmer</h3>
+            <h3>Software Developer</h3>
               <p>
                I'm a Computer Science student with a hunger for knowledge and
                an aptitude for action. Currently I'm studying at the University of Alaska Anchorage
@@ -157,6 +157,22 @@ function App() {
             <FadeUp>
               <h1>Contact</h1>
             </FadeUp>
+            <FadeUp>
+              <p>Wanna say hi, talk code, have an opportunity?<br></br>Feel free to send a message, I'd love to hear from you!</p>
+            </FadeUp>
+            <div style={{width: '100%'}}>
+              <FadeUp>
+                <div className='input-container'>
+                  <label>Name:</label>
+                  <input type='text' maxlength="100" id='emailName'></input>
+                  <label>Contact:</label>
+                  <input type='text' maxlength="100" id='emailContact'></input>
+                  <label>Message:</label>
+                  <textarea rows="7" cols="10" maxlength="500" id='emailMessage'></textarea>
+                  <button>Send</button>
+                </div>
+              </FadeUp>
+            </div>
           </section>
         </div>
       </main>
