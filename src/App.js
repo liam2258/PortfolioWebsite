@@ -58,7 +58,7 @@ function App() {
       labelContact.style.color = '#a8afd3';
       messageLabel.style.color = '#a8afd3';
 
-      fetch("http://localhost:8080/send", {
+      fetch("https://goemailapi.herokuapp.com/send", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
