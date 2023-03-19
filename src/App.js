@@ -236,7 +236,7 @@ function App() {
                   <label id='messageLabel'>Message:</label>
                   <textarea rows="7" cols="10" maxLength="500" id='emailMessage' spellCheck="false"></textarea>
                   <button id='emailButton' onClick={handleClick}>Send</button>
-                  {response != "" && <p className='response'>{response}</p>}
+                  {response !== "" && <p className='response'>{response}</p>}
                 </div>
               </FadeUp>
             </div>
