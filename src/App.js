@@ -8,8 +8,10 @@ import py from './Images/py.svg';
 import post from './Images/post.svg';
 import reactPic from './Images/react.svg';
 import x from './Images/x.svg';
+import github from './Images/github.svg';
 import heroku from './Images/heroku.svg';
 import go from './Images/go.svg';
+import link from './Images/link.svg';
 
 function App() {
 
@@ -195,25 +197,53 @@ function App() {
               <FadeUp>
                 <div className='cardHolder'>
                   <div className='card'>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc accumsan libero porta convallis imperdiet. Nullam nisl eros,
-                      condimentum ut nisl vitae, molestie ullamcorper diam.
-                    </p>
+                    <div className='cardTitle'>
+                      <h2>GoEmailAPI</h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A RESTful API written in Go that turns requests into emails and sends them. The same one used for this website's contact section.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: Go, Docker, JSON, REST, Heroku
+                    </div>
+                    <div className='cardIcons'>
+                      <a href='https://github.com/liam2258/GoEmailAPI'><img src={github}></img></a>
+                    </div>
                   </div>
                   <div className='card'>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc accumsan libero porta convallis imperdiet. Nullam nisl eros,
-                      condimentum ut nisl vitae, molestie ullamcorper diam.
-                    </p>
+                    <div className='cardTitle'>
+                      <h2>FaceRecognizer</h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A full-stack web application that locates the face on given images. Includes a function registration and login system.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: JavaScript, React, JSON, REST, Postgresql, Heroku
+                    </div>
+                    <div className='cardIcons'>
+                      <a href='https://liam2258.github.io/FaceRecognition/'><img src={link}></img></a>
+                      <a href='https://github.com/liam2258/FaceRecognition'><img src={github}></img></a>
+                    </div>
                   </div>
                   <div className='card'>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc accumsan libero porta convallis imperdiet. Nullam nisl eros,
-                      condimentum ut nisl vitae, molestie ullamcorper diam.
-                    </p>
+                    <div className='cardTitle'>
+                      <h2>GoEmailAPI</h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A RESTful API written in Go that turns requests into emails and sends them. The same one used for this website's contact section.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: Go, Docker, JSON, REST, Heroku
+                    </div>
+                    <div className='cardIcons'>
+                      <a href='https://github.com/liam2258/GoEmailAPI'><img src={github}></img></a>
+                    </div>
                   </div>
                 </div>
               </FadeUp>

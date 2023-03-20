@@ -490,15 +490,74 @@ img {
 .cardHolder {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
 }
 
 .card {
-    background-color: #1a1b27;
-    filter: brightness(150%);
+    background-color: #282739;
     display: flex;
     box-shadow: 0 10px 30px -15px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items:center;
+    width:100%;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+  }
+
+.card p {
+    margin-top: 10px;
+}
+
+.cardTitle {
+    padding: 5px;
+    color: #a8afd3;
+    filter: brightness(130%);
+    width: 100%;
+}
+
+.cardIcons {
+    width: 100%;
+    filter: brightness(130%);
+    display: flex;
+    justify-content: end;
+}
+
+.card img {
+    transition-duration: 0.3s;
+    padding: 1vh 0.5vw;
+}
+
+.card img:hover {
+    filter: brightness(130%);
+}
+
+.cardTitle h2{
+    margin: 10px;
+}
+
+.cardBody {
+    color: #a8afd3;
+    filter: brightness(110%);
+    padding: 0px 10px 10px 10px;
+}
+
+.cardSkills {
+    padding: 0px;
+    margin: 20px 0px 0px;
+    margin-top: 10px;
+    max-width: 540px;
+    color: #a8afd3;
+    filter: brightness(110%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    padding: 0px 10px 10px 10px;
 }
 
 .contentCardHolder {
@@ -511,7 +570,6 @@ img {
 .contactCard {
     display: flex;
     background-color: #1a1b27;
-    filter: brightness(150%);
     box-shadow: 0 10px 30px -15px;
     flex-direction: column;
 }
