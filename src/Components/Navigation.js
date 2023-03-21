@@ -11,7 +11,7 @@ function menuToggle() {
 
 //Returns a different navigation menu depending on the screen size
 function Navigation(windowWidth) {
-    if (windowWidth.windowWidth > 500) {
+    if (windowWidth.windowWidth > 520) {
         return(
             <ul className='nav' id="Navigation">
                 <a href="/#about" className='homeIcon' id='homeIcon'>Home</a>

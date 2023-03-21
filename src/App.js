@@ -12,6 +12,9 @@ import github from './Images/github.svg';
 import heroku from './Images/heroku.svg';
 import go from './Images/go.svg';
 import link from './Images/link.svg';
+import instagram from './Images/instagram.svg';
+import mail from './Images/mail.svg';
+import resume from './resume.pdf';
 
 function App() {
 
@@ -153,7 +156,7 @@ function App() {
                and am excited to put what I've learned to good use.
                </p>
                <div style={{paddingTop: '50px'}}>
-                <button style={{cursor: 'pointer'}} type="submit">Take a look!</button>
+                <a href={resume} target="_blank"><button style={{cursor: 'pointer'}} type="submit">Take a look!</button></a>
                </div>
           </section>
           <section className='about' id='about'>
@@ -198,7 +201,7 @@ function App() {
                 <div className='cardHolder'>
                   <div className='card'>
                     <div className='cardTitle'>
-                      <h2>GoEmailAPI</h2>
+                      <h2>GoMail</h2>
                     </div>
                     <div className='cardBody'>
                       <p>
@@ -209,7 +212,7 @@ function App() {
                       Tools used: Go, Docker, JSON, REST, Heroku
                     </div>
                     <div className='cardIcons'>
-                      <a href='https://github.com/liam2258/GoEmailAPI'><img src={github}></img></a>
+                      <a target="_blank" href='https://github.com/liam2258/GoMail'><img src={github}></img></a>
                     </div>
                   </div>
                   <div className='card'>
@@ -218,31 +221,79 @@ function App() {
                     </div>
                     <div className='cardBody'>
                       <p>
-                        A full-stack web application that locates the face on given images. Includes a function registration and login system.
+                        A full-stack web application that locates the face on given images. Includes a functioning registration and login system.
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: JavaScript, React, JSON, REST, Postgresql, Heroku
+                      Tools used: JavaScript, NodeJS, React, JSON, REST, PostgreSQL, Heroku
                     </div>
                     <div className='cardIcons'>
-                      <a href='https://liam2258.github.io/FaceRecognition/'><img src={link}></img></a>
-                      <a href='https://github.com/liam2258/FaceRecognition'><img src={github}></img></a>
+                      <a target="_blank" href='https://liam2258.github.io/FaceRecognition/'><img src={link}></img></a>
+                      <a target="_blank" href='https://github.com/liam2258/FaceRecognition'><img src={github}></img></a>
                     </div>
                   </div>
                   <div className='card'>
                     <div className='cardTitle'>
-                      <h2>GoEmailAPI</h2>
+                      <h2>DiabetesDetector</h2>
                     </div>
                     <div className='cardBody'>
                       <p>
-                        A RESTful API written in Go that turns requests into emails and sends them. The same one used for this website's contact section.
+                        A predictive model for diabetes created using multiple linear regression with gradient descent.
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: Go, Docker, JSON, REST, Heroku
+                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
                     </div>
                     <div className='cardIcons'>
-                      <a href='https://github.com/liam2258/GoEmailAPI'><img src={github}></img></a>
+                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                    </div>
+                  </div>
+                  <div className='card'>
+                    <div className='cardTitle'>
+                      <h2>DiabetesDetector</h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A predictive model for diabetes created using multiple linear regression with gradient descent.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
+                    </div>
+                    <div className='cardIcons'>
+                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                    </div>
+                  </div>
+                  <div className='card'>
+                    <div className='cardTitle'>
+                      <h2>DiabetesDetector</h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A predictive model for diabetes created using multiple linear regression with gradient descent.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
+                    </div>
+                    <div className='cardIcons'>
+                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                    </div>
+                  </div>
+                  <div className='card'>
+                    <div className='cardTitle'>
+                      <h2>DiabetesDetector</h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A predictive model for diabetes created using multiple linear regression with gradient descent.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
+                    </div>
+                    <div className='cardIcons'>
+                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
                     </div>
                   </div>
                 </div>
@@ -270,7 +321,22 @@ function App() {
                 </div>
               </FadeUp>
             </div>
+            <FadeUp>
+                <p style={{marginTop: '6vh', marginBottom: '3vh'}}>You can also reach me at...</p>
+            </FadeUp>
+            <FadeUp>
+              <div className='linkHolder'>
+                <a target="_blank" href="mailto:ldyer2@alaska.edu"><img src={mail}></img></a>
+                <a target="_blank" href="https://www.instagram.com/diam_lyer"><img src={instagram}></img></a>
+                <a target="_blank" href='https://github.com/liam2258'><img src={github}></img></a>
+              </div>
+            </FadeUp>
           </section>
+          <footer>
+            <div>
+              <p style={{padding: '5px', paddingLeft: '1vw'}}>Developed & Designed by Liam Dyer</p>
+            </div>
+          </footer>
         </div>
       </main>
     </div>
