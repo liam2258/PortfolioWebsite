@@ -15,6 +15,9 @@ import link from './Images/link.svg';
 import instagram from './Images/instagram.svg';
 import mail from './Images/mail.svg';
 import resume from './resume.pdf';
+import docker from './Images/docker.svg';
+import cpp from './Images/cpp.svg';
+import node from './Images/node.svg';
 
 function App() {
 
@@ -138,9 +141,9 @@ function App() {
           <img src={x} onClick={menuToggleBack}></img>
         </div>
         <ul className='sideNav'>
-          <a href="/#about" onClick={menuToggleBack} style={{float:'right'}}>About</a>
-          <a href="/#projects" onClick={menuToggleBack} style={{float:'right'}}>Projects</a>
-          <a href="/#contact" onClick={menuToggleBack} style={{float:'right'}}>Contact</a>
+          <a tabindex="-1" href="/#about" onClick={menuToggleBack} style={{float:'right'}}>About</a>
+          <a tabindex="-1" href="/#projects" onClick={menuToggleBack} style={{float:'right'}}>Projects</a>
+          <a tabindex="-1" href="/#contact" onClick={menuToggleBack} style={{float:'right'}}>Contact</a>
         </ul>
       </div>
       <Navigation windowWidth={width}/>
@@ -156,7 +159,7 @@ function App() {
                and am excited to put what I've learned to good use.
                </p>
                <div style={{paddingTop: '50px'}}>
-                <a href={resume} target="_blank"><button style={{cursor: 'pointer'}} type="submit">Take a look!</button></a>
+                <a tabindex="-1" href={resume} target="_blank"><button style={{cursor: 'pointer'}} type="submit">Take a look!</button></a>
                </div>
           </section>
           <section className='about' id='about'>
@@ -179,8 +182,10 @@ function App() {
                         <img src={reactPic}></img>
                         <img src={py}></img>
                         <img src={post}></img>
-                        <img src={heroku}></img>
                         <img src={go}></img>
+                        <img src={docker}></img>
+                        <img src={cpp}></img>
+                        <img src={heroku}></img>
                       </div>
                     </div>
                   </FadeUp>

@@ -127,8 +127,14 @@ img {
 
 .iconBox {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(75px, 1fr) );
-    padding: 15px 0px;
+    grid-template-columns: repeat( auto-fill, minmax(110px, 1fr) );
+    padding: 15px 15px 15px 0px;
+    row-gap: 10px;
+}
+
+.iconBox img {
+    justify-self: center;
+    align-self: center;
 }
 
 
@@ -232,7 +238,7 @@ img {
     max-width: 100%;
     height: auto;
     width: 300px;
-    min-width: 200px;
+    min-width: 250px;
 }
 
 @keyframes fadeIn {
