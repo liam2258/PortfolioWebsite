@@ -31,6 +31,7 @@ function App() {
     document.getElementById("emailMessage").value = "";
   }
 
+  //Handles click event for contact field, highlights unfilled input fields if empty, otherwise initiates send request to api and returns response
   function handleClick() {
     var nameField = document.getElementById("emailName").value;
     var contactField = document.getElementById("emailContact").value;
