@@ -17,7 +17,6 @@ import mail from './Images/mail.svg';
 import resume from './resume.pdf';
 import docker from './Images/docker.svg';
 import cpp from './Images/cpp.svg';
-import node from './Images/node.svg';
 
 function App() {
 
@@ -156,10 +155,10 @@ function App() {
               <p>
                I'm a Computer Science student with a hunger for knowledge and
                an aptitude for action. Currently I'm studying at the University of Alaska Anchorage
-               and am excited to put what I've learned to good use.
+               and am excited to put what I've learned to good use. Take a look!
                </p>
                <div style={{paddingTop: '50px'}}>
-                <a tabindex="-1" href={resume} target="_blank"><button style={{cursor: 'pointer'}} type="submit">Take a look!</button></a>
+                <a tabindex="-1" href={resume} target="_blank"><button style={{cursor: 'pointer'}} type="submit">Resume</button></a>
                </div>
           </section>
           <section className='about' id='about'>
@@ -230,7 +229,7 @@ function App() {
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: JavaScript, NodeJS, React, JSON, REST, PostgreSQL, Heroku
+                      Tools used: JavaScript, React, JSON, REST, PostgreSQL, Heroku
                     </div>
                     <div className='cardIcons'>
                       <a target="_blank" href='https://liam2258.github.io/FaceRecognition/'><img src={link}></img></a>
@@ -339,7 +338,10 @@ function App() {
           </section>
           <footer>
             <div>
-              <p style={{padding: '5px', paddingLeft: '1vw'}}>Developed & Designed by Liam Dyer</p>
+              <a target="_blank" href="https://github.com/liam2258/portfoliowebsite" >
+                <p style={{padding: '0px'}}>Developed & Designed by</p>
+                <p style={{padding: 'opx'}}>Liam Dyer</p>
+                </a>
             </div>
           </footer>
         </div>

@@ -177,7 +177,7 @@ img {
 .nav {
     padding: 0px;
     margin-top: 0;
-    height: 70px;
+    height: 80px;
     color: #16161e;
     position: fixed;
     width:100%;
@@ -188,7 +188,7 @@ img {
 }
 
 .nav a {
-    margin: 20px 20px 20px 20px;
+    margin: 25px 20px 20px 20px;
 	opacity: 0;
 	animation: fadeIn 0.3s ease-in both;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -202,6 +202,10 @@ img {
     color: #05B2DC;
     filter: brightness(130%);
     padding-right: 10px;
+}
+
+.nav a:nth-child(1):before {
+    content: none;
 }
 
 .nav a:hover {
@@ -266,10 +270,21 @@ img {
 .homeIcon {
     float: left;
     color: #05B2DC;
+    position: relative;
+    top: -10px;
+    padding: 0px;
+}
+
+.homeIcon img {
+    margin: 7px 0px 0px 12px;
+    padding: 0px;
+    padding-bottom: 2vw;
+    transition-duration: 0.2s;
 }
 
 .homeIcon:hover {
 	cursor: pointer;
+    filter: brightness(130%);
 }
 
 .menuIcon {
@@ -278,7 +293,7 @@ img {
     padding: 0px;
     animation: fadeIn 0.3s ease-in both;
     transition-duration: 0.2s;
-    margin: 3vh 5vw 1vh 1vw;
+    margin: 22px 30px 0px 0px;
 }
 
 .menuIcon:hover {
@@ -319,11 +334,11 @@ img {
 
 .sideNav {
     display: grid;
-    padding-top: 30%;
+    margin-top: 30%;
 }
 
 .sideNav a {
-    padding: 5vh 3vw;
+    margin: 5vh 3vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     text-decoration: none;
@@ -534,7 +549,7 @@ img {
 
 .cardIcons {
     width: 100%;
-    filter: brightness(130%);
+    filter: brightness(120%);
     display: flex;
     justify-content: end;
     margin-top: auto;
@@ -571,7 +586,7 @@ img {
 }
 
 .linkHolder img {
-    filter: brightness(130%);
+    filter: brightness(120%);
     padding: 0;
     transition-duration: 0.3s
 }
@@ -673,8 +688,13 @@ footer {
     filter: brightness(110%);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
-    position: absolute;
-    width: 99vw;
+    width: 99.9%;
     left: 0;
-    overflow:hidden
+    overflow:hidden;
+    text-align: center;
+}
+
+footer a {
+    color: #a8afd3;
+    text-decoration: none;
 }
