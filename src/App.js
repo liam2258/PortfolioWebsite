@@ -102,16 +102,25 @@ function App() {
     }
   }
 
+  function navUp() {
+    document.getElementById('Navigation').style.animation="slideUp 0.25s ease-in both";
+  }
+
+  function navDown() {
+    document.getElementById('Navigation').style.animation="slideDown 0.25s ease-in both";
+  }
+
   //Function to handle elements based on page scrolling
   function reportScrollStatus() {
     var current = document.getElementsByTagName("html")[0].scrollTop;
+    console.log(current)
 
     //When scrolling down, trigger the animation to slide the navbar out of sight
     //When scrolling up, trigger the animation to bring the navbar back into sight
     if (current > scroll && scroll > 80) {
-      document.getElementById('Navigation').style.animation="slideUp 0.25s ease-in both";
-    } else {
-      document.getElementById('Navigation').style.animation="slideDown 0.25s ease-in both";
+      navUp();
+    } else if (current < scroll) {
+      navDown();
     }
 
     setScroll(current)
@@ -126,8 +135,8 @@ function App() {
 
   //Function to trigger side menu closing animation when hitting the close icon
  function menuToggleBack() {
-  document.getElementById('sideMenu').style.animation="slideBack 0.3s ease-in both";
-  document.getElementById('layer').style.animation="slideLeft 0.3s ease-in both";
+  document.getElementById('sideMenu').style.animation="slideBack 0.25s ease-in both";
+  document.getElementById('layer').style.animation="slideLeft 0.25s ease-in both";
   document.getElementsByTagName( 'html' )[0].classList.toggle('stuck');
   document.getElementById('sideMenu').style.opacity = '0';
   document.getElementById('layer').style.opacity = '0';
@@ -145,9 +154,9 @@ function App() {
           <img src={x} onClick={menuToggleBack} alt="close icon for menu"></img>
         </div>
         <ul className='sideNav'>
-          <a tabIndex="-1" href="/#about" onClick={menuToggleBack} style={{float:'right'}}>About</a>
-          <a tabIndex="-1" href="/#projects" onClick={menuToggleBack} style={{float:'right'}}>Projects</a>
-          <a tabIndex="-1" href="/#contact" onClick={menuToggleBack} style={{float:'right'}}>Contact</a>
+          <a tabIndex="-1" href="#about" onClick={() => {menuToggleBack();navUp();}} style={{float:'right'}}>About</a>
+          <a tabIndex="-1" href="#projects" onClick={() => {menuToggleBack();navUp();}} style={{float:'right'}}>Projects</a>
+          <a tabIndex="-1" href="#contact" onClick={() => {menuToggleBack();navUp();}} style={{float:'right'}}>Contact</a>
         </ul>
       </div>
       <Navigation windowWidth={width}/>

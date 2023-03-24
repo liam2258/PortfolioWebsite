@@ -7,10 +7,14 @@ import lambda from '../Images/lambda.svg';
 function menuToggle() {
     document.getElementById('sideMenu').style.opacity = '1';
     document.getElementById('layer').style.opacity = '1';
-    document.getElementById('sideMenu').style.animation="slideIn 0.3s ease-in both";
-    document.getElementById('layer').style.animation="slideRight 0.3s ease-in both";
+    document.getElementById('sideMenu').style.animation="slideIn 0.25s ease-in both";
+    document.getElementById('layer').style.animation="slideRight 0.25s ease-in both";
     document.getElementsByTagName( 'html' )[0].classList.toggle('stuck');
- }
+}
+
+function navUp() {
+    document.getElementById('Navigation').style.animation="slideUp 0.25s ease-in both";
+}
 
 //Returns a different navigation menu depending on the screen size
 function Navigation(windowWidth) {
@@ -20,9 +24,9 @@ function Navigation(windowWidth) {
                 <div>
                     <a tabIndex="-1" href="#top" className='homeIcon' id='homeIcon' style={{padding:'0px', height:'0px', width:'0px'}}><img style={{padding:'0px'}} src={lambda} tabIndex='1' alt="Lambda icon"></img></a>
                 </div>
-                <a href="/#contact" style={{float:'right'}} tabIndex="4">Contact</a>
-                <a href="/#projects" style={{float:'right'}} tabIndex="3">Projects</a>
-                <a href="/#about" style={{float:'right'}} tabIndex="2">About</a>
+                <a href="#contact" onClick={navUp} style={{float:'right'}} tabIndex="4">Contact</a>
+                <a href="#projects" onClick={navUp} style={{float:'right'}} tabIndex="3">Projects</a>
+                <a href="#about" onClick={navUp} style={{float:'right'}} tabIndex="2">About</a>
             </ul>
         );
     } else {
