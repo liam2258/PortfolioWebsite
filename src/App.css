@@ -697,6 +697,7 @@ footer {
 footer a {
     color: #a8afd3;
     text-decoration: none;
+    padding-bottom: 12px;
 }
 
 footer a:hover {
