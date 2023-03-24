@@ -107,9 +107,9 @@ img {
 }
 
 .intro {
-    padding-top: 210px;
+    padding-top: 22vh;
     padding-bottom: 0px;
-    margin-left: 30px;
+    margin-left: 1.6vw;
 }
 
 .introContainer {
@@ -310,6 +310,7 @@ img {
     filter: brightness(130%);
     z-index: 2000;
     overflow: visible;
+    opacity: 0;
 }
 
 @keyframes slideIn {
@@ -334,7 +335,7 @@ img {
 
 .sideNav {
     display: grid;
-    margin-top: 30%;
+    margin-top: 70%;
 }
 
 .sideNav a {
@@ -367,6 +368,7 @@ img {
     backdrop-filter: blur(7px);
     z-index: 1650;
     overflow: hidden;
+    opacity: 0;
 }
 
 @keyframes slideRight {
@@ -388,9 +390,9 @@ img {
 }
 
 .closeIcon {
-    display: flex;
-    justify-content: right;
     margin: 4vh 6vw;
+    position: absolute;
+    right: 10px;
 }
 
 .closeIcon:hover {
