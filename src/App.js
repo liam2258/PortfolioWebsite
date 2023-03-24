@@ -66,6 +66,8 @@ function App() {
       labelContact.style.color = '#a8afd3';
       messageLabel.style.color = '#a8afd3';
 
+      setResponse("Processing...")
+
       fetch("https://goemailapi.herokuapp.com/send", {
         method: 'POST',
         headers: {
@@ -138,7 +140,7 @@ function App() {
       <div className='layer' id='layer'></div>
       <div className='sideMenu' id='sideMenu'>
         <div className='closeIcon'>
-          <img src={x} onClick={menuToggleBack}></img>
+          <img src={x} onClick={menuToggleBack} alt="close icon for menu"></img>
         </div>
         <ul className='sideNav'>
           <a tabindex="-1" href="/#about" onClick={menuToggleBack} style={{float:'right'}}>About</a>
@@ -159,7 +161,7 @@ function App() {
                and am excited to put what I've learned to good use. Take a look!
                </p>
                <div style={{paddingTop: '50px'}}>
-                <a tabindex="-1" href={resume} target="_blank"><button style={{cursor: 'pointer'}} type="submit">Resume</button></a>
+                <a tabindex="-1" href={resume} target="_blank" rel="noreferrer"><button style={{cursor: 'pointer'}} type="submit">Resume</button></a>
                </div>
           </section>
           <section className='about' id='about'>
@@ -178,21 +180,21 @@ function App() {
                       </p>
                       <p>Here are some of the technologies I've used...</p>
                       <div className='iconBox'>
-                        <img src={jv}></img>
-                        <img src={reactPic}></img>
-                        <img src={py}></img>
-                        <img src={post}></img>
-                        <img src={go}></img>
-                        <img src={docker}></img>
-                        <img src={cpp}></img>
-                        <img src={heroku}></img>
+                        <img src={jv} alt="Javascript icon"></img>
+                        <img src={reactPic} alt="React icon"></img>
+                        <img src={py} alt="Python icon"></img>
+                        <img src={post} alt="PostgreSQL icon"></img>
+                        <img src={go} alt="Go programming language icon"></img>
+                        <img src={docker} alt="Docker icon"></img>
+                        <img src={cpp} alt="C++ icon"></img>
+                        <img src={heroku} alt="Heroku icon"></img>
                       </div>
                     </div>
                   </FadeUp>
                 </div>
                 <div style={{height: 'auto', flexBasis: '40%', flexGrow: 1, display: 'grid', alignContent: 'center', justifyContent: 'center'}}>
                   <FadeUp>
-                    <img className ='self_pic' src={self_pic} alt='Me!'></img>
+                    <img className ='self_pic' src={self_pic} alt='Liam Dyer'></img>
                   </FadeUp>
                 </div>
               </div>
@@ -217,7 +219,7 @@ function App() {
                       Tools used: Go, Docker, JSON, REST, Heroku
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" href='https://github.com/liam2258/GoMail'><img src={github}></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/GoMail'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
@@ -233,8 +235,8 @@ function App() {
                       Tools used: JavaScript, React, JSON, REST, PostgreSQL, Heroku
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" href='https://liam2258.github.io/FaceRecognition/'><img src={link}></img></a>
-                      <a target="_blank" href='https://github.com/liam2258/FaceRecognition'><img src={github}></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://liam2258.github.io/FaceRecognition/'><img src={link} alt="Web link icon"></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/FaceRecognition'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
@@ -250,55 +252,55 @@ function App() {
                       Tools used: Python, Jupyter Notebooks, Pandas, NumPy
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/DiabetesDetector'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
                     <div className='cardTitle'>
-                      <h2>DiabetesDetector</h2>
+                      <h2>TFTPy</h2>
                     </div>
                     <div className='cardBody'>
                       <p>
-                        A predictive model for diabetes created using multiple linear regression with gradient descent.
+                        An implementation of a TFTP server using Python. Server accepts arguments using arg parser and processes read and write requests.
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
+                      Tools used: Python
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/TFTPy'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
                     <div className='cardTitle'>
-                      <h2>DiabetesDetector</h2>
+                      <h2>TravelingSalesmanEA</h2>
                     </div>
                     <div className='cardBody'>
                       <p>
-                        A predictive model for diabetes created using multiple linear regression with gradient descent.
+                        An implementation of the traveling salesman problem using evolutionary algorithms. Tests different mutations and compares results.
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
+                      Tools used: C++
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/TravelingSalesmanEA'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
                     <div className='cardTitle'>
-                      <h2>DiabetesDetector</h2>
+                      <h2>JobWebScraper</h2>
                     </div>
                     <div className='cardBody'>
                       <p>
-                        A predictive model for diabetes created using multiple linear regression with gradient descent.
+                        A Python script to scrape job data from GlassDoor. Compiles data on preferred programming laguages, location, and employer to an csv.
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
+                      Tools used: Python, Selenium
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" href='https://github.com/liam2258/DiabetesDetector'><img src={github}></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/JobWebScraper'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                 </div>
@@ -331,15 +333,15 @@ function App() {
             </FadeUp>
             <FadeUp>
               <div className='linkHolder'>
-                <a target="_blank" href="mailto:ldyer2@alaska.edu"><img src={mail}></img></a>
-                <a target="_blank" href="https://www.instagram.com/diam_lyer"><img src={instagram}></img></a>
-                <a target="_blank" href='https://github.com/liam2258'><img src={github}></img></a>
+                <a target="_blank" rel="noreferrer" href="mailto:ldyer2@alaska.edu"><img src={mail} alt="Mail icon"></img></a>
+                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/diam_lyer"><img src={instagram} alt="Instagram icon"></img></a>
+                <a target="_blank" rel="noreferrer" href='https://github.com/liam2258'><img src={github} alt="Github icon"></img></a>
               </div>
             </FadeUp>
           </section>
           <footer>
             <div>
-              <a target="_blank" href="https://github.com/liam2258/portfoliowebsite" >
+              <a target="_blank" rel="noreferrer" href="https://github.com/liam2258/portfoliowebsite" style={{width: '160px', height:'70px', display:'inline-block'}}>
                 <p style={{padding: '0px'}}>Developed & Designed by</p>
                 <p style={{padding: 'opx'}}>Liam Dyer</p>
                 </a>

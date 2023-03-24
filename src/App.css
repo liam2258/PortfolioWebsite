@@ -551,7 +551,7 @@ img {
     width: 100%;
     filter: brightness(120%);
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: auto;
 }
 
@@ -587,7 +587,7 @@ img {
 
 .linkHolder img {
     filter: brightness(120%);
-    padding: 0;
+    padding: 0px 7px;
     transition-duration: 0.3s
 }
 
@@ -674,7 +674,7 @@ label {
 
 .contact button:hover {
     background-color: #099abe;
-    filter: brightness(110%);
+    filter: brightness(120%);
     cursor: pointer;
 }
 
@@ -697,4 +697,9 @@ footer {
 footer a {
     color: #a8afd3;
     text-decoration: none;
+}
+
+footer a:hover {
+    color: #05B2DC;
+    filter: brightness(130%);
 }
