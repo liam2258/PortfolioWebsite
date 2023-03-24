@@ -352,7 +352,7 @@ function App() {
           </section>
           <footer>
             <div>
-              <a target="_blank" rel="noreferrer" href="https://github.com/liam2258/portfoliowebsite" style={{width: '160px', height:'70px', display:'inline-block'}}>
+              <a target="_blank" rel="noreferrer" href="https://github.com/liam2258/PortfolioWebsite" style={{width: '160px', height:'70px', display:'inline-block'}}>
                 <p style={{padding: '0px'}}>Developed & Designed by</p>
                 <p style={{padding: 'opx'}}>Liam Dyer</p>
                 </a>
