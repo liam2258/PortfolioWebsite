@@ -9,8 +9,6 @@ import post from './Images/post.svg';
 import reactPic from './Images/react.svg';
 import x from './Images/x.svg';
 import github from './Images/github.svg';
-import heroku from './Images/heroku.svg';
-import go from './Images/go.svg';
 import link from './Images/link.svg';
 import instagram from './Images/instagram.svg';
 import mail from './Images/mail.svg';
@@ -36,7 +34,7 @@ function App() {
     var nameField = document.getElementById("emailName").value;
     var contactField = document.getElementById("emailContact").value;
     var messageField = document.getElementById("emailMessage").value;
-
+  
     var nameItem = document.getElementById('emailName');
     var labelName = document.getElementById('nameLabel');
     var contactItem = document.getElementById('emailContact');
@@ -44,20 +42,40 @@ function App() {
     var messageItem = document.getElementById('emailMessage');
     var messageLabel = document.getElementById('messageLabel');
 
-    if (nameField === "" || contactField === "" || messageField === "") {
+    // Regualr expression to check for valid email
+    var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (nameField === "" || contactField === "" || messageField === "" || !(validEmail.test(contactField))) {
       if (nameField === "") {
         nameItem.style.borderColor = '#F67280';
         labelName.style.color = '#F67280';
+      } else {
+        nameItem.style.borderColor = '#64697e'; // Reset the border color
+        labelName.style.color = '#a8afd3'; // Reset the label color
       }
+  
       if (contactField === "") {
         contactItem.style.borderColor = '#F67280';
         labelContact.style.color = '#F67280';
+      } else {
+        contactItem.style.borderColor = '#64697e'; // Reset the border color
+        labelContact.style.color = '#a8afd3'; // Reset the label color
       }
+  
       if (messageField === "") {
         messageItem.style.borderColor = '#F67280';
         messageLabel.style.color = '#F67280';
+      } else {
+        messageItem.style.borderColor = '#64697e'; // Reset the border color
+        messageLabel.style.color = '#a8afd3'; // Reset the label color
       }
-      setResponse("Please fill out required fields");
+  
+      if (validEmail.test(contactField)) {
+        setResponse("Please fill out required fields");
+      }
+      else {
+        setResponse("Please use a valid email");
+      }
     } else {
       nameItem.style.borderColor = '#64697e';
       contactItem.style.borderColor = '#64697e';
@@ -68,7 +86,7 @@ function App() {
 
       setResponse("Processing...")
 
-      fetch("https://goemailapi.herokuapp.com/send", {
+      fetch("https://pymail-80b20c568f73.herokuapp.com/send", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -195,10 +213,8 @@ function App() {
                         <img src={reactPic} alt="React icon"></img>
                         <img src={py} alt="Python icon"></img>
                         <img src={post} alt="PostgreSQL icon"></img>
-                        <img src={go} alt="Go programming language icon"></img>
                         <img src={docker} alt="Docker icon"></img>
                         <img src={cpp} alt="C++ icon"></img>
-                        <img src={heroku} alt="Heroku icon"></img>
                       </div>
                     </div>
                   </FadeUp>
@@ -219,18 +235,37 @@ function App() {
                 <div className='cardHolder'>
                   <div className='card'>
                     <div className='cardTitle'>
-                      <h2>GoMail</h2>
+                      <h2>Pymail</h2>
                     </div>
                     <div className='cardBody'>
                       <p>
-                        A RESTful API written in Go that turns requests into emails and sends them. The same one used for this website's contact section.
+                        A RESTful API written in Python that turns requests into emails and sends them. It also tracks sent messages using a PostgreSQL database.
                       </p>
                     </div>
                     <div className='cardSkills'>
-                      Tools used: Go, Docker, JSON, REST, Heroku
+                      Tools used: Python, Docker, JSON, REST, Heroku
                     </div>
                     <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/GoMail'><img src={github} alt="Github icon"></img></a>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/Pymail'><img src={github} alt="Github icon"></img></a>
+                    </div>
+                  </div>
+                  <div className='card'>
+                    <div className='cardTitle'>
+                      <h2>Huffman
+                      <br></br>
+                      CompAndDecomp
+                      </h2>
+                    </div>
+                    <div className='cardBody'>
+                      <p>
+                        A Huffman compression and decompression program written in C++.
+                      </p>
+                    </div>
+                    <div className='cardSkills'>
+                      Tools used: C++, Binary Trees, Hash Tables
+                    </div>
+                    <div className='cardIcons'>
+                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/HuffmanCompAndDecomp'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
@@ -248,22 +283,6 @@ function App() {
                     <div className='cardIcons'>
                       <a target="_blank" rel="noreferrer" href='https://liam2258.github.io/FaceRecognition/'><img src={link} alt="Web link icon"></img></a>
                       <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/FaceRecognition'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>DiabetesDetector</h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        A predictive model for diabetes created using multiple linear regression with gradient descent.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: Python, Jupyter Notebooks, Pandas, NumPy
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/DiabetesDetector'><img src={github} alt="Github icon"></img></a>
                     </div>
                   </div>
                   <div className='card'>
@@ -330,7 +349,7 @@ function App() {
                 <div className='input-container'>
                   <label id='nameLabel'>Name:</label>
                   <input type='text' maxLength="100" id='emailName'></input>
-                  <label id='contactLabel'>Contact:</label>
+                  <label id='contactLabel'>Email:</label>
                   <input type='text' maxLength="100" id='emailContact'></input>
                   <label id='messageLabel'>Message:</label>
                   <textarea rows="7" cols="10" maxLength="500" id='emailMessage' spellCheck="false"></textarea>

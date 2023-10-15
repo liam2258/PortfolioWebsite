@@ -127,7 +127,7 @@ img {
 
 .iconBox {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(110px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(170px, 1fr) );
     padding: 15px 15px 15px 0px;
     row-gap: 10px;
 }
