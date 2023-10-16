@@ -1,6 +1,6 @@
 # PortfolioWebsite
 
-A personal portfolio website created using the React framework and responsive design.
+A personal portfolio website created using the React framework and responsive web design.
 
 
 ## Methods
