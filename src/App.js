@@ -42,7 +42,7 @@ function App() {
     var messageItem = document.getElementById('emailMessage');
     var messageLabel = document.getElementById('messageLabel');
 
-    // Regualr expression to check for valid email
+    // Regular expression to check for valid email
     var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (nameField === "" || contactField === "" || messageField === "" || !(validEmail.test(contactField))) {
