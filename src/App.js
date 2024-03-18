@@ -15,6 +15,7 @@ import mail from './Images/mail.svg';
 import resume from './resume.pdf';
 import docker from './Images/docker.svg';
 import cpp from './Images/cpp.svg';
+import ProjectCards from './Components/ProjectCards';
 
 function App() {
 
@@ -230,112 +231,11 @@ function App() {
             <FadeUp>
               <h1>Projects</h1>
             </FadeUp>
-            <div style={{width:'100%'}}>
-              <FadeUp>
-                <div className='cardHolder'>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>Pymail</h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        A RESTful API written in Python that turns requests into emails and sends them. It also tracks sent messages using a PostgreSQL database.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: Python, Docker, JSON, REST, Heroku
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/Pymail'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>Huffman
-                      <br></br>
-                      CompAndDecomp
-                      </h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        A Huffman compression and decompression program written in C++.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: C++, Binary Trees, Hash Tables
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/HuffmanCompAndDecomp'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>FaceRecognizer</h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        A full-stack web application that locates the face on given images. Includes a functioning registration and login system.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: JavaScript, React, JSON, REST, PostgreSQL, Heroku
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://liam2258.github.io/FaceRecognition/'><img src={link} alt="Web link icon"></img></a>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/FaceRecognition'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>TFTPy</h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        An implementation of a TFTP server using Python. Server accepts arguments using arg parser and processes read and write requests.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: Python
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/TFTPy'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>TravelingSalesmanEA</h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        An implementation of the traveling salesman problem using evolutionary algorithms. Tests different mutations and compares results.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: C++
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/TravelingSalesmanEA'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                  <div className='card'>
-                    <div className='cardTitle'>
-                      <h2>JobWebScraper</h2>
-                    </div>
-                    <div className='cardBody'>
-                      <p>
-                        A Python script to scrape job data from GlassDoor. Compiles data on preferred programming laguages, location, and employer to an csv.
-                      </p>
-                    </div>
-                    <div className='cardSkills'>
-                      Tools used: Python, Selenium
-                    </div>
-                    <div className='cardIcons'>
-                      <a target="_blank" rel="noreferrer" href='https://github.com/liam2258/JobWebScraper'><img src={github} alt="Github icon"></img></a>
-                    </div>
-                  </div>
-                </div>
-              </FadeUp>
-            </div>
+              <div style={{ width: '100%' }}>
+                <FadeUp>
+                  <ProjectCards />
+                </FadeUp>
+              </div>
           </section>
           <section className='contact' id='contact'>
             <FadeUp>
