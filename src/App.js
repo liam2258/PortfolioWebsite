@@ -186,8 +186,8 @@ function App() {
             <h2>Liam Dyer,</h2>
             <h3>Software Developer</h3>
               <p>
-               I'm a Computer Science student with a hunger for knowledge and
-               an aptitude for action. Currently I'm studying at the University of Alaska Anchorage
+               I'm a Computer Science graduate with a hunger for knowledge and
+               an aptitude for action. I've recently graduated from the University of Alaska Anchorage
                and am excited to put what I've learned to good use. Take a look!
                </p>
                <div style={{paddingTop: '50px'}}>
